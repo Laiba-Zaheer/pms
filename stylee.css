@@ -1,0 +1,204 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #1a0202;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar with banner background */
+.navbar {
+  background: url('banner.png') no-repeat center center/cover;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 20px 20px;
+  animation: fadeIn 1s ease;
+}
+
+/* Top row: logo + filters */
+.navbar-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Logo */
+.logo {
+  width: 160px;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Filters with glass effect */
+.navbar-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Filters */
+.unit-filter,
+.category-dropdown {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: rgb(13, 12, 12);
+}
+
+.unit-filter label,
+.category-dropdown label {
+  font-weight: bold;
+}
+
+.unit-filter select,
+.unit-filter input,
+.category-dropdown select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(15, 14, 14);
+  transition: background 0.3s;
+}
+
+.unit-filter select:hover,
+.category-dropdown select:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Bottom row: nav links */
+.navbar-bottom {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.nav-links a {
+  color: #151414;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Property Cards */
+.property-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* Individual Card */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+  color: #0073e6;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.card p {
+  padding: 0 10px 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-bottom {
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

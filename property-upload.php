@@ -39,14 +39,14 @@ if (mysqli_num_rows($result) > 0) {
                 <!-- Details -->
                 <div class="col-md-7">
                     <div class="card-body text-start">
-                        <h5 class="card-title text-primary"><?php echo htmlspecialchars($row["p-Name"]); ?></h5>
-                        <p class="card-text"><strong>Description:</strong> <?php echo htmlspecialchars($row["p-des"]); ?></p>
-                        <p class="card-text"><strong>Owner:</strong> <?php echo htmlspecialchars($row["p-owner"]); ?></p>
+                        <h5 class="card-title text-primary"><?php echo htmlspecialchars($row["p_name"]); ?></h5>
+                        <p class="card-text"><strong>Description:</strong> <?php echo htmlspecialchars($row["p_des"]); ?></p>
+                        <p class="card-text"><strong>Owner:</strong> <?php echo htmlspecialchars($row["p_owner"]); ?></p>
                         <p class="card-text">
-                            <strong><i class="fa-solid fa-bed"></i> Beds:</strong> <?php echo $row["p-bed"]; ?> |
-                            <strong><i class="fa-solid fa-bath"></i> Baths:</strong> <?php echo $row["p-baths"]; ?>
+                            <strong><i class="fa-solid fa-bed"></i> Beds:</strong> <?php echo $row["p_bed"]; ?> |
+                            <strong><i class="fa-solid fa-bath"></i> Baths:</strong> <?php echo $row["p_baths"]; ?>
                         </p>
-                        <p class="card-text"><strong>Area:</strong> <?php echo $row["p-sqfeat"]; ?> sq ft</p>
+                        <p class="card-text"><strong>Area:</strong> <?php echo $row["p_sqft"]; ?> sq ft</p>
                         <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
 
                         <!-- Action Buttons -->

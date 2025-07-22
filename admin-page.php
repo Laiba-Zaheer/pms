@@ -81,19 +81,19 @@
         <div class="modal-body row g-3">
           <div class="col-md-6">
             <label class="form-label">Property Name</label>
-            <input type="text" name="p-Name" class="form-control" required>
+            <input type="text" name="p_name" class="form-control" required>
           </div>
           <div class="col-md-6">
             <label class="form-label">Owner</label>
-            <input type="text" name="p-owner" class="form-control" required>
+            <input type="text" name="p_owner" class="form-control" required>
           </div>
           <div class="col-md-6">
             <label class="form-label">City</label>
-            <input type="text" name="p-city" class="form-control" required>
+            <input type="text" name="p_city" class="form-control" required>
           </div>
           <div class="col-md-6">
             <label class="form-label">Category</label>
-            <select name="p-category" class="form-select" required>
+            <select name="p_category" class="form-select" required>
               <option value="residential">Residential</option>
               <option value="commercial">Commercial</option>
               <option value="rental">Rental</option>
@@ -101,27 +101,27 @@
           </div>
           <div class="col-md-6">
             <label class="form-label">Price</label>
-            <input type="number" name="p-price" class="form-control" required>
+            <input type="number" name="p_price" class="form-control" required>
           </div>
           <div class="col-md-6">
             <label class="form-label">Square Feet</label>
-            <input type="number" name="p-sqfeat" class="form-control" required>
+            <input type="number" name="p_sqft" class="form-control" required>
           </div>
           <div class="col-md-6">
             <label class="form-label">Bedrooms</label>
-            <input type="number" name="p-bed" class="form-control">
+            <input type="number" name="p_bed" class="form-control">
           </div>
           <div class="col-md-6">
             <label class="form-label">Bathrooms</label>
-            <input type="number" name="p-baths" class="form-control">
+            <input type="number" name="p_baths" class="form-control">
           </div>
           <div class="col-md-12">
             <label class="form-label">Description</label>
-            <textarea name="p-des" class="form-control" rows="3" required></textarea>
+            <textarea name="p_des" class="form-control" rows="3" required></textarea>
           </div>
           <div class="col-md-12">
             <label class="form-label">Upload Image</label>
-            <input type="file" name="p-img" class="form-control" accept="image/*" required>
+            <input type="file" name="p_img" class="form-control" accept="image/*" required>
           </div>
         </div>
         <div class="modal-footer">

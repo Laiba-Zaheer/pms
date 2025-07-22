@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
 <?php
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $imagePath = 'admin/upload/' . $row['p-img'];
+        $imagePath = 'admin/upload/' . $row['p_img'];
         $fallbackImagePath = 'property2.jpg';
         ?>
         
@@ -39,19 +39,19 @@ if (mysqli_num_rows($result) > 0) {
                 <!-- Details -->
                 <div class="col-md-7">
                     <div class="card-body text-start">
-                        <h5 class="card-title text-primary"><?php echo htmlspecialchars($row["p-Name"]); ?></h5>
-                        <p class="card-text"><strong>Description:</strong> <?php echo htmlspecialchars($row["p-des"]); ?></p>
-                        <p class="card-text"><strong>Owner:</strong> <?php echo htmlspecialchars($row["p-owner"]); ?></p>
+                        <h5 class="card-title text-primary"><?php echo htmlspecialchars($row["p_name"]); ?></h5>
+                        <p class="card-text"><strong>Description:</strong> <?php echo htmlspecialchars($row["p_des"]); ?></p>
+                        <p class="card-text"><strong>Owner:</strong> <?php echo htmlspecialchars($row["p_owner"]); ?></p>
                         <p class="card-text">
-                            <strong><i class="fa-solid fa-bed"></i> Beds:</strong> <?php echo $row["p-bed"]; ?> |
-                            <strong><i class="fa-solid fa-bath"></i> Baths:</strong> <?php echo $row["p-baths"]; ?>
+                            <strong><i class="fa-solid fa-bed"></i> Beds:</strong> <?php echo $row["p_bed"]; ?> |
+                            <strong><i class="fa-solid fa-bath"></i> Baths:</strong> <?php echo $row["p_baths"]; ?>
                         </p>
-                        <p class="card-text"><strong>Area:</strong> <?php echo $row["p-sqfeat"]; ?> sq ft</p>
+                        <p class="card-text"><strong>Area:</strong> <?php echo $row["p_sqft"]; ?> sq ft</p>
                         <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
 
                         <!-- Action Buttons -->
-                        <a href="update.php?id=<?php echo $row['p-id']; ?>" class="btn btn-warning btn-sm me-2">Update</a>
-                        <a href="?delete=<?php echo $row['p-id']; ?>" class="btn btn-danger btn-sm"
+                        <a href="update.php?id=<?php echo $row['p_id']; ?>" class="btn btn-warning btn-sm me-2">Update</a>
+                        <a href="?delete=<?php echo $row['p_id']; ?>" class="btn btn-danger btn-sm"
                            onclick="return confirm('Are you sure you want to delete this property?');">
                             Delete
                         </a>
